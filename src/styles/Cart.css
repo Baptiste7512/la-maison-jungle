@@ -1,15 +1,5 @@
-.cart-box{
-  width: 25%;
-  height: 50%;
-  text-align: left;
-  box-shadow: 1px 1px 3px black;
-  margin: 0 0 0 0;
-}
-
-.cart-box > h2{
-  border-bottom: 0.5px solid whitesmoke;
-}
-.cart-box > ul{
-  list-style: none;
-  border-bottom: 0.5px solid whitesmoke;
+.lmj-cart {
+	color: white;
+	background-color: #31b572;
+	padding: 32px;
 }
