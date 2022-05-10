@@ -5,10 +5,6 @@ function handleClick(plantName) {
     alert(`🌱souhaitez vous ajouté ${plantName} à votre panier🌱`)
 }
 
-function test(e) {
-  console.log('💥', e)
-}
-
 function PlantItem({ id, cover, name, water, light }) {
 	return (
 

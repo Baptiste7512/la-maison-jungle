@@ -1,5 +1,8 @@
-.lmj-cart {
-	color: white;
+.cart-box {
+	text-align: center;
+  justify-content: center;
+  color: white;
 	background-color: #31b572;
 	padding: 32px;
 }
+

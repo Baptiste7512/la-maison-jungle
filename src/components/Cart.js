@@ -5,10 +5,7 @@ function Cart() {
  const ivyPrice = 10
  const flowerPrice = 15
  return (<div className='cart-box' style={{
-   padding: '32px',
-   color: 'white',
    textShadow: '0.5px 0.5px black',
-   backgroundColor: '#31b572',
    border: '1px solid black',
 
  }}>
