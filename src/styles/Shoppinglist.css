@@ -1,7 +1,16 @@
 .lmj-plant-list {
-	list-style-type: none;
+	list-style: none;
 	padding: 32px;
 	display: flex;
 	flex-wrap: wrap;
 	max-width: 800px;
+}
+
+li{
+  list-style: none;
+}
+
+.list-shopping{
+  display: flex;
+  text-align: center;
 }

@@ -7,7 +7,6 @@ function Cart() {
  return (<div className='cart-box' style={{
    textShadow: '0.5px 0.5px black',
    border: '1px solid black',
-
  }}>
      <h2>Panier</h2>
      <ul>
