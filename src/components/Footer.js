@@ -1,21 +1,38 @@
-import { useState } from "react";
+import { useState } from 'react'
 import '../styles/Footer.css'
 
 function Footer() {
-  const [inputValue, setInputValue] = useState('')
+	const [inputValue, setInputValue] = useState('')
 
-  return (
-    <footer className="lmj-footer">
-      <div className="lmj-footer-item">
-        🌱 Pour les passionné.e.s de plantes en tout genres 🌱
-      </div>
-      <div className="lmj-footer-item">Laissez nous votre mail:</div>
-        <textarea
-          value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
-          />
-        <button onClick={() => alert(inputValue)}>Alerte moi💥</button>
-    </footer>
-  )
+  function writeInput(e){
+    setInputValue(e.target.value)
+  }
+
+  function conditionValue(){
+    if(!inputValue.includes('@')){
+      alert('Le mail entré est pas conforme')
+    }else{
+      alert('Nous avons enregistrer votre mail')
+    }
+  }
+
+	return (
+		<footer className='lmj-footer'>
+			<div className='lmj-footer-elem'>
+      🌿🌱🌵 Pour les passionné de vert 🌿🌱🌵
+			</div>
+			<div className='lmj-footer-elem'>Laissez-nous votre mail :</div>
+      <input
+        placeholder='graine@gmail.com'
+        value={inputValue}
+        onChange={writeInput}
+        onBlur={conditionValue}
+        />
+        <button onChange={(e)=> alert(conditionValue)}>
+          Send
+        </button>
+		</footer>
+	)
 }
+
 export default Footer
