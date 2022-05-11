@@ -2,7 +2,7 @@ import CareScale from './CareScale'
 import '../styles/PlantItem.css'
 
 function handleClick(plantName) {
-    alert(`🌱souhaitez vous ajouté ${plantName} à votre panier🌱`)
+    alert(`🌱souhaitez vous ajouté ${plantName} à votre panier?🌱`)
 }
 
 function PlantItem({ id, cover, name, water, light }) {
