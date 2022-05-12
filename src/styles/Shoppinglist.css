@@ -14,3 +14,7 @@ li{
   display: flex;
   text-align: center;
 }
+
+h2, p{
+  font-family: 'Roboto', sans-serif;
+}

@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+
 .lmj-banner{
   display: flex;
   text-align: center;
   justify-content: center;
+  font-family: 'Notable';
 }
 
 .lmj-logo{
