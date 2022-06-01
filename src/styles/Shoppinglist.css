@@ -4,6 +4,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	max-width: 800px;
+  position:sticky-right;
 }
 
 li{
@@ -11,8 +12,11 @@ li{
 }
 
 .list-shopping{
-  display: flex;
-  text-align: center;
+  list-style-type: none;
+	padding: 32px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 h2, p{
