@@ -1,24 +1,14 @@
+.lmj-shopping-list {
+	width: 100%;
+}
+
 .lmj-plant-list {
-	list-style: none;
-	padding: 32px;
-	display: flex;
-	flex-wrap: wrap;
-	max-width: 800px;
-  position:sticky-right;
-}
-
-li{
-  list-style: none;
-}
-
-.list-shopping{
-  list-style-type: none;
+	list-style-type: none;
 	padding: 32px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 }
-
 h2, p{
   font-family: 'Roboto', sans-serif;
 }

@@ -8,32 +8,47 @@ function ShoppingList({cart, updateCart}) {
 			acc.includes(plant.category) ? acc : acc.concat(plant.category),
 		[]
 	)
+  function addToCart(name, price) {
+    const currentPlantSave = cart.find((plant)=> plant.name === name)
 
+    if (currentPlantSave) {
+      const cartFilterCurrentPlant = cart.filter((plant)=> plant.name !== name)
+      updateCart ([
+        ...cartFilterCurrentPlant,
+        {name, price, amount: currentPlantSave.amount + 1}
+      ])
+    } else {
+      updateCart([
+        ...cart,
+        {name, price, amount: 1}
+      ])
+    }
+  }
 	return (
-		<div>
-			<ul>
-				{categories.map((cat) => (
-					<li className="list-shopping" key={cat}>{cat}</li>
-				))}
-			</ul>
-
-			<ul className='lmj-plant-list'>
-				{plantList.map(({ id, cover, name, water, light }) => (
-					<div key={id}>
-            <PlantItem
-              id={id}
-              cover={cover}
-              name={name}
-              water={water}
-              light={light}
-            />
-            <button onClick={()=> updateCart(cart + 1)}>
-              ajouter au panier
-            </button>
-          </div>
+    <div className='lmj-shopping-list'>
+      <ul>
+        {categories.map((cat) => (
+          <li key={cat} className='cat'>
+              {cat} 
+          </li>
+        ))}
+      </ul>
+      <ul className='lmj-plant-list'>
+          {plantList.map(({id, cover, name, water, light, price}) => (
+            <div key= {id}>
+              <PlantItem
+                cover={cover}
+                name={name}
+                water={water}
+                light={light}
+                price={price}/>
+                <button onClick={()=> addToCart(name,price)}>
+                  Ajouter
+                </button>
+            </div>
           ))}
-			</ul>
-		</div>
+      </ul>
+    </div>
 	)
 }
 
