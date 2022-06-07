@@ -1,14 +1,21 @@
 import '../styles/Cart.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function Cart({ cart, updateCart }) {
- const [isOpen, setIsOpen] = useState(false)
- /* let total = monsteraPrice * cart */
- const total = cart.reduce(
-                  (acc, plantType) => acc + plantType.amount * plantType.price,
-                  0
-                )
 
+  const [isOpen, setIsOpen] = useState(false)
+  /* let total = monsteraPrice * cart */
+
+  const total = cart.reduce(
+    (acc, plantType) => acc + plantType.amount * plantType.price,
+    0
+  )
+  useEffect(() => {
+    alert(`Bienvenue dans la maison Jungle`)
+  }, [])
+  useEffect(() => {
+    alert(`🤑Vous avez ${total}€ à payer🤑`)
+  }, [total])
 
  return isOpen ? (
     <div className='lmj-cart'>
@@ -16,6 +23,7 @@ function Cart({ cart, updateCart }) {
              onClick={() => setIsOpen(false)}>
        fermer
      </button>
+
      {cart.length > 0 ? (
       <div>
         <h2>Panier</h2>

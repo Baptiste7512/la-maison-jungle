@@ -1,10 +1,10 @@
-import '../App.css';
 import Banner from './Banner';
 import Cart from './Cart';
 import ShoppingList from './ShoppingList';
 import Footer from './Footer';
-import { useState } from 'react';
+import '../App.css';
 import '../styles/layout.css'
+import { useState } from 'react';
 
 function App() {
   const [cart, updateCart] = useState([])
