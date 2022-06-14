@@ -14,7 +14,6 @@ function CareScale({ scaleValue, careType }) {
 		) : (
 			<img src={Water} alt='water-icon' />
 		)
-
 	return (
     <div onClick={() =>
       alert(`Cette plante a besoin ${quantity[scaleValue]} ${careType === 'light' ? 'de soleil' : "d'eau"}`)

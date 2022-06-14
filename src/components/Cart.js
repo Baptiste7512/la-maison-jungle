@@ -11,10 +11,7 @@ function Cart({ cart, updateCart }) {
     0
   )
   useEffect(() => {
-    alert(`Bienvenue dans la maison Jungle`)
-  }, [])
-  useEffect(() => {
-    alert(`🤑Vous avez ${total}€ à payer🤑`)
+    document.title = `🤑Vous avez ${total}€ d'achats🤑`
   }, [total])
 
  return isOpen ? (

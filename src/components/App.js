@@ -10,6 +10,9 @@ function App() {
   const savedCart = localStorage.getItem('cart')
   const [cart, updateCart] = useState(savedCart ? JSON.parse(savedCart) : [])
   useEffect(() => {
+    alert(`Bienvenue dans la maison Jungle`)
+  }, [])
+  useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart))
   },
   [cart])
